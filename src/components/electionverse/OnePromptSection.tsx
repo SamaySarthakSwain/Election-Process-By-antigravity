@@ -27,11 +27,18 @@ export const OnePromptSection = () => {
     setLoading(true);
     setContent("");
     try {
-      const { data, error } = await supabase.functions.invoke("generate-content", {
-        body: { type: "onePrompt", topic: q },
+      // Pointing to the new Python FastAPI backend
+      const res = await fetch("http://localhost:8000/api/generate-content", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ type: "onePrompt", topic: q }),
       });
-      if (error) throw error;
-      if (data?.error) throw new Error(data.error);
+      
+      if (!res.ok) {
+        throw new Error("Make sure the Python backend is running on port 8000!");
+      }
+      
+      const data = await res.json();
       setContent(data.content);
     } catch (e: unknown) {
       toast.error(e instanceof Error ? e.message : "Generation failed");

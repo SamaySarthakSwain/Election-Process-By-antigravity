@@ -35,11 +35,17 @@ export const StrategySection = () => {
     setLoading(true);
     setResult(null);
     try {
-      const { data, error } = await supabase.functions.invoke("strategy-eval", {
-        body: { candidate, region, budget, audience, strategy },
+      const res = await fetch("http://localhost:8000/api/strategy-eval", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ candidate, region, budget, audience, strategy }),
       });
-      if (error) throw error;
-      if (data?.error) throw new Error(data.error);
+      
+      if (!res.ok) {
+        throw new Error("Make sure the Python backend is running on port 8000!");
+      }
+      
+      const data = await res.json();
       setResult(data.evaluation);
       addXP(50, "strategist");
       toast.success("+50 XP — Election Strategist badge!");
