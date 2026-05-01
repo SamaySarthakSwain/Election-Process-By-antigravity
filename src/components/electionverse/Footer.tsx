@@ -7,7 +7,6 @@ export const Footer = () => (
         <Crown className="h-6 w-6 text-primary" />
       </div>
       <div className="font-display text-lg gold-text mb-1">ElectionVerse AI</div>
-      <div className="text-xs text-muted-foreground tracking-widest uppercase mb-4">Royal Civic Intelligence · Built with Lovable AI</div>
       <div className="ornament-divider max-w-xs mx-auto">
         <span className="text-xs">✦</span>
       </div>

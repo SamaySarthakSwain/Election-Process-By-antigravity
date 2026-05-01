@@ -8,6 +8,7 @@ import { StrategySection } from "@/components/electionverse/StrategySection";
 import { OnePromptSection } from "@/components/electionverse/OnePromptSection";
 import { DashboardSection } from "@/components/electionverse/DashboardSection";
 import { ContentStudio } from "@/components/electionverse/ContentStudio";
+import { ElectionProcessCards } from "@/components/electionverse/ElectionProcessCards";
 import { Footer } from "@/components/electionverse/Footer";
 import { useGame } from "@/lib/gamification";
 
@@ -24,7 +25,12 @@ const Index = () => {
     <div className="min-h-screen flex flex-col">
       <NavBar active={section} onChange={setSection} />
       <main className="flex-1">
-        {section === "home" && <Hero onCta={setSection} />}
+        {section === "home" && (
+          <>
+            <Hero onCta={setSection} />
+            <ElectionProcessCards />
+          </>
+        )}
         {section === "journey" && <JourneySection />}
         {section === "mentor" && <MentorSection />}
         {section === "simulator" && <SimulatorSection />}

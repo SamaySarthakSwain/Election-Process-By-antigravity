@@ -3,10 +3,11 @@ import { Crown, Sparkles, ArrowRight, Bot, BarChart3, ChevronRight } from "lucid
 
 export const Hero = ({ onCta }: { onCta: (id: string) => void }) => {
   return (
-    <section className="relative overflow-hidden">
-      {/* Decorative orbs */}
-      <div className="pointer-events-none absolute -top-32 -left-32 h-96 w-96 rounded-full bg-primary/20 blur-3xl" />
-      <div className="pointer-events-none absolute -bottom-32 -right-32 h-96 w-96 rounded-full bg-accent/20 blur-3xl" />
+    <section className="relative overflow-hidden min-h-[90vh] flex flex-col justify-center">
+      {/* Animated Decorative orbs */}
+      <div className="absolute top-[-10%] left-[-10%] w-[500px] h-[500px] rounded-full bg-blue-400/20 blur-[100px] animate-float opacity-50 mix-blend-multiply" />
+      <div className="absolute bottom-[-10%] right-[-10%] w-[600px] h-[600px] rounded-full bg-purple-400/20 blur-[120px] animate-float opacity-50 mix-blend-multiply" style={{ animationDelay: '2s' }} />
+      <div className="absolute top-[40%] left-[50%] w-[400px] h-[400px] rounded-full bg-amber-400/10 blur-[80px] animate-float opacity-30 mix-blend-multiply transform -translate-x-1/2 -translate-y-1/2" style={{ animationDelay: '4s' }} />
 
       <div className="container relative pt-20 pb-24 text-center">
         <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-primary/30 bg-primary/5 mb-8 animate-fade-in">

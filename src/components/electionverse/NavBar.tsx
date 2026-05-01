@@ -29,7 +29,6 @@ export const NavBar = ({ active, onChange }: NavBarProps) => {
           </div>
           <div className="leading-tight">
             <div className="font-display text-lg font-bold gold-text">ElectionVerse</div>
-            <div className="text-[10px] tracking-[0.25em] uppercase text-muted-foreground">AI · Royal Civic Intelligence</div>
           </div>
         </button>
 
