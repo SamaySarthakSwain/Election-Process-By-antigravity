@@ -18,7 +18,7 @@ export const ContentStudio = () => {
     setContent("");
     try {
       const { data, error } = await supabase.functions.invoke("generate-content", {
-        body: { type, topic: "ElectionVerse AI - the royal civic intelligence platform" },
+        body: { type, topic: "ElectionVerse - the AI civic intelligence platform" },
       });
       if (error) throw error;
       if (data?.error) throw new Error(data.error);
