@@ -58,14 +58,14 @@ export const ElectionProcessCards = () => {
 
         <div className="relative">
           {/* Flowchart Connector Line */}
-          <div className="absolute top-1/2 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-primary/30 to-transparent -translate-y-1/2 hidden lg:block rounded-full" />
+          <div className="absolute top-1/2 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-primary/30 to-transparent -translate-y-1/2 hidden xl:block rounded-full" />
 
-          <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
             {STEPS.map((step, index) => (
-              <div key={step.id} className="relative group perspective-1000">
+              <div key={step.id} className="relative group perspective-1000 h-[320px]">
                 {/* 3D Flashcard */}
                 <div 
-                  className={`royal-card p-6 h-full flex flex-col items-center text-center transition-all duration-700 transform-3d group-hover:rotateY-180 group-hover:-translate-y-4 ${step.border}`}
+                  className={`royal-card relative w-full h-full transition-all duration-700 transform-3d group-hover:rotateY-180 group-hover:-translate-y-4 ${step.border}`}
                   style={{ transformStyle: 'preserve-3d' }}
                 >
                   {/* Front of Card */}
@@ -96,7 +96,7 @@ export const ElectionProcessCards = () => {
 
                 {/* Connector Arrow for Mobile/Tablet */}
                 {index < STEPS.length - 1 && (
-                  <div className="lg:hidden flex justify-center py-4">
+                  <div className="xl:hidden flex justify-center py-4">
                     <ArrowRight className="h-6 w-6 text-primary/40 rotate-90" />
                   </div>
                 )}
