@@ -76,7 +76,7 @@ export const JourneySection = () => {
     if (!completed.includes(active)) {
       completeStep(active);
       toast.success(`+25 XP — ${STEPS[active].title} completed!`, {
-        description: active === STEPS.length - 1 ? "👑 Royal Path Walker badge unlocked!" : undefined,
+        description: active === STEPS.length - 1 ? "🎯 Civic Architect badge unlocked!" : undefined,
       });
     }
     if (active < STEPS.length - 1) setActive(active + 1);
@@ -88,7 +88,7 @@ export const JourneySection = () => {
         <Badge variant="outline" className="border-primary/40 text-primary mb-4">
           <GraduationCap className="h-3 w-3 mr-1" /> Interactive Journey
         </Badge>
-        <h2 className="font-display text-4xl md:text-5xl font-bold mb-3">The Royal <span className="gold-text">Election Path</span></h2>
+        <h2 className="font-display text-4xl md:text-5xl font-bold mb-3">Strategic <span className="gold-text">Election Lifecycle</span></h2>
         <p className="text-muted-foreground max-w-xl mx-auto">A guided five-step path. Choose your depth — explanations adapt to you.</p>
       </div>
 
@@ -125,7 +125,7 @@ export const JourneySection = () => {
             <button
               key={s.title}
               onClick={() => setActive(i)}
-              className={`royal-card p-3 text-center transition-all ${isActive ? "royal-border ring-2 ring-primary/40" : ""}`}
+              className={`impact-card p-3 text-center transition-all ${isActive ? "precision-border ring-2 ring-primary/40" : ""}`}
             >
               <div className="text-2xl mb-1">{s.emoji}</div>
               <div className="text-[10px] uppercase tracking-wider text-muted-foreground">Step {i+1}</div>
@@ -138,7 +138,7 @@ export const JourneySection = () => {
       </div>
 
       {/* Active step card */}
-      <div className="royal-card royal-border max-w-3xl mx-auto p-8 animate-scale-in" key={active}>
+      <div className="impact-card precision-border max-w-3xl mx-auto p-8 animate-scale-in" key={active}>
         <div className="flex items-start gap-4 mb-4">
           <div className="text-5xl">{STEPS[active].emoji}</div>
           <div>

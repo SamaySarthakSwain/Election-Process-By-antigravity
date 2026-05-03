@@ -58,7 +58,7 @@ export const OnePromptSection = () => {
       </div>
 
       <div className="max-w-4xl mx-auto">
-        <div className="royal-card royal-border p-4 flex gap-2 mb-4">
+        <div className="impact-card precision-border p-4 flex gap-2 mb-4">
           <Input
             value={prompt}
             onChange={(e) => setPrompt(e.target.value)}
@@ -79,7 +79,7 @@ export const OnePromptSection = () => {
           ))}
         </div>
 
-        <div className="royal-card p-6 min-h-[400px]">
+        <div className="impact-card p-6 min-h-[400px]">
           {!content && !loading && (
             <div className="text-center text-muted-foreground py-20">
               <Wand2 className="h-12 w-12 mx-auto mb-3 opacity-50 text-primary" />

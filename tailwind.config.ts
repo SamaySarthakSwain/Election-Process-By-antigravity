@@ -60,12 +60,12 @@ export default {
         sm: "calc(var(--radius) - 4px)",
       },
       backgroundImage: {
-        'gradient-royal': 'var(--gradient-royal)',
+        'gradient-precision': 'var(--gradient-precision)',
         'gradient-gold': 'var(--gradient-gold)',
         'gradient-card': 'var(--gradient-card)',
       },
       boxShadow: {
-        royal: 'var(--shadow-royal)',
+        precision: 'var(--shadow-precision)',
         glow: 'var(--shadow-glow)',
         elegant: 'var(--shadow-elegant)',
       },

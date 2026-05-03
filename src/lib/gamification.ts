@@ -14,7 +14,7 @@ export const ALL_BADGES: Badge[] = [
   { id: "strategist", name: "Election Strategist", emoji: "♟️", description: "Ran a Candidate Strategy evaluation" },
   { id: "simulator", name: "What-If Wizard", emoji: "🔮", description: "Completed a simulation run" },
   { id: "scholar", name: "Civic Scholar", emoji: "🎓", description: "Asked the AI Mentor 5 questions" },
-  { id: "journey", name: "Royal Path Walker", emoji: "👑", description: "Completed the entire Election Journey" },
+  { id: "journey", name: "Civic Architect", emoji: "🏛️", description: "Completed the entire Election Journey" },
 ];
 
 type GameState = {

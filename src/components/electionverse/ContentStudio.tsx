@@ -70,7 +70,7 @@ export const ContentStudio = () => {
           </Button>
         </div>
 
-        <div className="royal-card royal-border p-6 min-h-[400px] relative">
+        <div className="impact-card precision-border p-6 min-h-[400px] relative">
           {content && (
             <Button size="sm" variant="outline" className="absolute top-4 right-4 z-10" onClick={copy}>
               {copied ? <CheckCheck className="h-3 w-3" /> : <Copy className="h-3 w-3" />}

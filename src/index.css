@@ -45,7 +45,7 @@
     --radius: 1.5rem;
 
     /* Premium Light Gradients */
-    --gradient-royal: linear-gradient(135deg, hsl(220 10% 98%) 0%, hsl(220 15% 92%) 100%);
+    --gradient-precision: linear-gradient(135deg, hsl(220 10% 98%) 0%, hsl(220 15% 92%) 100%);
     --gradient-gold: linear-gradient(135deg, hsl(220 90% 50%) 0%, hsl(250 80% 60%) 100%);
     --gradient-card: linear-gradient(145deg, hsl(0 0% 100% / 0.9), hsl(220 10% 98% / 0.8));
     --gradient-hero: radial-gradient(circle at 20% 30%, hsl(220 90% 95% / 0.8), transparent 40%),
@@ -56,7 +56,7 @@
     --gradient-animated: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
 
     /* Premium Light Shadows & 3D */
-    --shadow-royal: 0 30px 60px -15px hsl(220 20% 50% / 0.15), 0 10px 20px -8px hsl(220 20% 50% / 0.1);
+    --shadow-precision: 0 30px 60px -15px hsl(220 20% 50% / 0.15), 0 10px 20px -8px hsl(220 20% 50% / 0.1);
     --shadow-glow: 0 0 30px hsl(220 90% 50% / 0.15);
     --shadow-elegant: 0 10px 30px -5px hsl(220 20% 50% / 0.08);
     --shadow-inset: inset 0 1px 0 0 hsl(0 0% 100% / 0.8);
@@ -109,16 +109,16 @@
 
 @layer components {
   /* 3D Premium Card */
-  .royal-card {
+  .impact-card {
     @apply relative rounded-[1.5rem] border border-white/60 backdrop-blur-xl bg-white/70;
     box-shadow: var(--shadow-elegant), var(--shadow-inset);
     transform-style: preserve-3d;
     transition: transform 0.5s var(--transition-bounce), box-shadow 0.5s var(--transition-smooth);
   }
 
-  .royal-card:hover {
+  .impact-card:hover {
     transform: perspective(1200px) translateY(-5px) rotateX(2deg) rotateY(2deg);
-    box-shadow: var(--shadow-royal), var(--shadow-glow);
+    box-shadow: var(--shadow-precision), var(--shadow-glow);
   }
 
   .gold-text {
@@ -128,10 +128,10 @@
     -webkit-text-fill-color: transparent;
   }
 
-  .royal-border {
+  .precision-border {
     position: relative;
   }
-  .royal-border::before {
+  .precision-border::before {
     content: "";
     position: absolute;
     inset: 0;

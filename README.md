@@ -30,7 +30,7 @@ ElectionVerse AI is built on a modern, dual-stack architecture designed for perf
 ElectionVerse AI leverages several Google technologies to deliver its premium experience:
 
 *   **Google Gemini 2.5 Flash**: The core intelligence engine. We use the official `google-genai` SDK for low-latency, structured AI generation, powering the AI Mentor and the Strategy Lab.
-*   **Google Fonts**: The "Regal" aesthetic is achieved using the **Playfair Display** (for display headings) and **Inter** (for high-readability body text) typography, ensuring a premium feel that meets accessibility standards.
+*   **Google Fonts**: An authoritative, institutional aesthetic is achieved using the **Playfair Display** (for display headings) and **Inter** (for high-readability body text) typography, ensuring a professional, institutional-grade feel that meets accessibility standards.
 *   **Google AI SDK**: Used for strict JSON response parsing, enabling the seamless conversion of unstructured political data into structured simulation metrics.
 
 ---

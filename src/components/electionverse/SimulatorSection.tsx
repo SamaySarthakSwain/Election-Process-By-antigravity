@@ -85,7 +85,7 @@ export const SimulatorSection = () => {
       <div className="grid lg:grid-cols-[380px_1fr] gap-6 max-w-7xl mx-auto">
         {/* Controls */}
         <div className="space-y-4">
-          <div className="royal-card p-5">
+          <div className="impact-card p-5">
             <div className="flex justify-between items-center mb-3">
               <div className="text-sm font-semibold">Voter Turnout</div>
               <span className="gold-text font-display text-xl">{turnout}%</span>
@@ -94,7 +94,7 @@ export const SimulatorSection = () => {
             <div className="text-xs text-muted-foreground mt-2">Higher turnout amplifies coalition power.</div>
           </div>
 
-          <div className="royal-card p-5">
+          <div className="impact-card p-5">
             <div className="text-sm font-semibold mb-3">Party Vote Share</div>
             <div className="space-y-3">
               {PARTIES.map((p) => (
@@ -109,7 +109,7 @@ export const SimulatorSection = () => {
             </div>
           </div>
 
-          <div className="royal-card p-5">
+          <div className="impact-card p-5">
             <div className="text-sm font-semibold mb-3">Regional Weight</div>
             <div className="space-y-2.5">
               {REGIONS.map((r) => (
@@ -132,7 +132,7 @@ export const SimulatorSection = () => {
         {/* Visualizations */}
         <div className="space-y-4">
           {/* Verdict */}
-          <div className="royal-card royal-border p-6">
+          <div className="impact-card precision-border p-6">
             <div className="flex flex-wrap items-center justify-between gap-4">
               <div>
                 <div className="text-xs uppercase tracking-wider text-muted-foreground">Projected Winner</div>
@@ -154,7 +154,7 @@ export const SimulatorSection = () => {
 
           {/* Bar */}
           <div className="grid md:grid-cols-2 gap-4">
-            <div className="royal-card p-5">
+            <div className="impact-card p-5">
               <div className="text-sm font-semibold mb-3">Seats Projection</div>
               <ResponsiveContainer width="100%" height={220}>
                 <BarChart data={seatProjection}>
@@ -168,7 +168,7 @@ export const SimulatorSection = () => {
               </ResponsiveContainer>
             </div>
 
-            <div className="royal-card p-5">
+            <div className="impact-card p-5">
               <div className="text-sm font-semibold mb-3">Vote Share</div>
               <ResponsiveContainer width="100%" height={220}>
                 <PieChart>
@@ -182,7 +182,7 @@ export const SimulatorSection = () => {
           </div>
 
           {/* Radar */}
-          <div className="royal-card p-5">
+          <div className="impact-card p-5">
             <div className="text-sm font-semibold mb-3">Regional Strength (top 3 parties)</div>
             <ResponsiveContainer width="100%" height={260}>
               <RadarChart data={radarData}>

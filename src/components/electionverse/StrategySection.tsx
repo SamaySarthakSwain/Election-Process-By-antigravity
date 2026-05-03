@@ -4,7 +4,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import { Slider } from "@/components/ui/slider";
 import { Badge } from "@/components/ui/badge";
-import { Loader2, Trophy, ChevronUp, AlertTriangle, Sparkles, Crown } from "lucide-react";
+import { Loader2, Trophy, ChevronUp, AlertTriangle, Sparkles, Target } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from "sonner";
 import { useGame } from "@/lib/gamification";
@@ -61,15 +61,15 @@ export const StrategySection = () => {
     <section className="container py-16">
       <div className="text-center mb-10">
         <Badge variant="outline" className="border-primary/40 text-primary mb-4">
-          <Crown className="h-3 w-3 mr-1" /> Candidate Strategy Lab
+          <Target className="h-3 w-3 mr-1" /> Candidate Strategy Lab
         </Badge>
         <h2 className="font-display text-4xl md:text-5xl font-bold mb-3">Be the <span className="gold-text">Candidate</span></h2>
-        <p className="text-muted-foreground max-w-2xl mx-auto">Set your budget, audience, and battle plan. The royal AI strategist returns a brutally honest verdict.</p>
+        <p className="text-muted-foreground max-w-2xl mx-auto">Set your budget, audience, and battle plan. The precision AI strategist returns a brutally honest verdict.</p>
       </div>
 
       <div className="grid lg:grid-cols-2 gap-6 max-w-6xl mx-auto">
         {/* Form */}
-        <div className="royal-card royal-border p-6 space-y-4">
+        <div className="impact-card precision-border p-6 space-y-4">
           <div>
             <label className="text-xs uppercase tracking-wider text-muted-foreground">Candidate Name</label>
             <Input value={candidate} onChange={(e) => setCandidate(e.target.value)} className="bg-background/60 mt-1" />
@@ -99,12 +99,12 @@ export const StrategySection = () => {
         </div>
 
         {/* Result */}
-        <div className="royal-card royal-border p-6 min-h-[500px]">
+        <div className="impact-card precision-border p-6 min-h-[500px]">
           {!result && !loading && (
             <div className="h-full flex flex-col items-center justify-center text-center text-muted-foreground">
               <Trophy className="h-14 w-14 mb-3 text-primary opacity-60" />
               <div className="font-display text-xl mb-1">Awaiting your strategy</div>
-              <div className="text-sm max-w-sm">Submit your plan to receive a royal verdict — win probability, strengths, weaknesses, and improvements.</div>
+              <div className="text-sm max-w-sm">Submit your plan to receive a strategic assessment — win probability, strengths, weaknesses, and improvements.</div>
             </div>
           )}
           {loading && (

@@ -124,7 +124,7 @@ export const ElectionProcessCards = () => {
 
                   {/* Content Container */}
                   <div className={`w-full md:w-[45%] ${isEven ? "md:pr-12 md:text-right" : "md:pl-12 md:text-left md:order-last"}`}>
-                    <div className={`royal-card p-6 md:p-10 transition-all duration-500 hover:shadow-glow hover:-translate-y-2 ${step.border} group`}>
+                    <div className={`impact-card p-6 md:p-10 transition-all duration-500 hover:shadow-glow hover:-translate-y-2 ${step.border} group`}>
                       <div className={`flex flex-col md:flex-row items-start md:items-center gap-5 mb-6 ${isEven ? "md:flex-row-reverse" : ""}`}>
                         <div className={`w-20 h-20 shrink-0 rounded-2xl flex items-center justify-center bg-gradient-to-br ${step.color} shadow-inner transition-transform duration-500 group-hover:scale-110`}>
                           {step.icon}

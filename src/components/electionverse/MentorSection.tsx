@@ -105,14 +105,14 @@ export const MentorSection = () => {
         <Badge variant="outline" className="border-primary/40 text-primary mb-4">
           <Bot className="h-3 w-3 mr-1" /> AI Election Mentor
         </Badge>
-        <h2 className="font-display text-4xl md:text-5xl font-bold mb-3">Your <span className="gold-text">Royal Tutor</span></h2>
+        <h2 className="font-display text-4xl md:text-5xl font-bold mb-3">Civic <span className="gold-text">Intelligence Mentor</span></h2>
         <p className="text-muted-foreground max-w-xl mx-auto">Three modes. One brilliant assistant. Every answer ships with explainable reasoning.</p>
       </div>
 
       <div className="grid lg:grid-cols-[280px_1fr] gap-6 max-w-6xl mx-auto">
         {/* Sidebar */}
         <div className="space-y-4">
-          <div className="royal-card p-4">
+          <div className="impact-card p-4">
             <div className="text-xs uppercase tracking-wider text-muted-foreground mb-3">Mentor Mode</div>
             <div className="space-y-2">
               {MODES.map((m) => {
@@ -131,7 +131,7 @@ export const MentorSection = () => {
             </div>
           </div>
 
-          <div className="royal-card p-4">
+          <div className="impact-card p-4">
             <div className="text-xs uppercase tracking-wider text-muted-foreground mb-3">Your Level</div>
             <div className="flex gap-2 flex-wrap">
               {["beginner","student","advanced"].map((l) => (
@@ -143,7 +143,7 @@ export const MentorSection = () => {
             </div>
           </div>
 
-          <div className="royal-card p-4">
+          <div className="impact-card p-4">
             <div className="text-xs uppercase tracking-wider text-muted-foreground mb-3">Quick Asks</div>
             <div className="space-y-1.5">
               {SUGGESTIONS.map((s) => (
@@ -156,12 +156,12 @@ export const MentorSection = () => {
         </div>
 
         {/* Chat */}
-        <div className="royal-card royal-border flex flex-col h-[640px]">
+        <div className="impact-card precision-border flex flex-col h-[640px]">
           <div ref={scrollRef} className="flex-1 overflow-y-auto p-6 space-y-4">
             {messages.length === 0 && (
               <div className="h-full flex flex-col items-center justify-center text-center text-muted-foreground">
                 <Bot className="h-14 w-14 mb-3 text-primary opacity-60" />
-                <div className="font-display text-xl mb-1">Your court awaits a question</div>
+                <div className="font-display text-xl mb-1">The system awaits your query</div>
                 <div className="text-sm max-w-sm">Switch modes on the left to change the mentor's voice. Ask anything about elections.</div>
               </div>
             )}
