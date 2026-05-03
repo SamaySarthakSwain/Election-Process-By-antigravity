@@ -35,7 +35,8 @@ export const StrategySection = () => {
     setLoading(true);
     setResult(null);
     try {
-      const res = await fetch("http://localhost:8000/api/strategy-eval", {
+      const baseUrl = import.meta.env.VITE_API_BASE_URL || "http://localhost:8000";
+      const res = await fetch(`${baseUrl}/api/strategy-eval`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ candidate, region, budget, audience, strategy }),

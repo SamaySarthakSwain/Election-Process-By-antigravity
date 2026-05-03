@@ -28,7 +28,8 @@ export const OnePromptSection = () => {
     setContent("");
     try {
       // Pointing to the new Python FastAPI backend
-      const res = await fetch("http://localhost:8000/api/generate-content", {
+      const baseUrl = import.meta.env.VITE_API_BASE_URL || "http://localhost:8000";
+      const res = await fetch(`${baseUrl}/api/generate-content`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ type: "onePrompt", topic: q }),
